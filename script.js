@@ -26,9 +26,12 @@ function Book(name, genre, author, pages, read) {
 };
 
 function addBookToLibrary(name, genre, author, pages, read) {
-    let newBook = new Book(name, genre, author, pages, read);
-    //before adding we need to check if name is already added
-    //if yes, return "This book already exists in your library"
-    //if not, then add book
-    return myLibrary.push(newBook);
-};
+    for (let book of myLibrary) {
+        if (book.name.toLowerCase() === name.toLowerCase()) {
+            return "This book already exists in your library";
+        };
+    }
+    let newBook = new Book (name, genre, author, pages, read);
+    myLibrary.push(newBook);
+    return newBook;
+    };
