@@ -9,8 +9,12 @@ let test = function () {
     alert('js is connected to the html');
 }; 
 
+// end of test
 
-function book(name, genre, author, pages, read) {
+const myLibrary = [];
+
+
+function Book(name, genre, author, pages, read) {
     this.name = name;
     this.genre = genre;
     this.author = author;
@@ -21,4 +25,7 @@ function book(name, genre, author, pages, read) {
     };
 };
 
-const book01 = new book('the Lord of the Rings', 'Fantasy', 'J.J.R. Tolkien', '1000', 'read');
+function addBookToLibrary(name, genre, author, pages, read) {
+    let newBook = new Book(name, genre, author, pages, read);
+    return myLibrary.push(newBook);
+};
