@@ -1,12 +1,15 @@
 const buttonTest = document.querySelector('#test');
+const modal = document.getElementById('bookForModal'); 
+
+
 
 buttonTest.addEventListener('click', function(){
-    test();
+    openAddBook();
 });
 
-let test = function () {
-    console.log('js file linked to html');
-    alert('js is connected to the html');
+let openAddBook = function () {
+    console.log('button test');
+    modal.style.display = 'block';
 }; 
 
 // end of test

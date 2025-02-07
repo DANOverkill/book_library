@@ -10,5 +10,19 @@
 <body>
     <h1>This will be a book library!</h1>
     <button id="test">button</button>
+    <div id="bookFormModal" class="modal">
+        <span class="close">&times;</span>
+        <form id="bookForm">
+          <input type="text" id="title" placeholder="Book Title" required>
+          <input type="text" id="author" placeholder="Author" required>
+          <input type="text" id="genre" placeholder="Genre">
+          <input type="number" id="pages" placeholder="Page Count">
+          <div>
+            <label>Have you read it?</label>
+            <input type="checkbox" id="read">
+          </div>
+          <button type="submit">Add Book</button>
+        </form>
+    </div>
 </body>
 </html>
