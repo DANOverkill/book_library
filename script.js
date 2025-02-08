@@ -1,5 +1,5 @@
 const buttonTest = document.querySelector('#test');
-const modal = document.getElementById('bookForModal'); 
+const modal = document.querySelector('.modal'); 
 
 
 
