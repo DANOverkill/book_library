@@ -1,12 +1,18 @@
+// DOM cash ----------------------------
 const addBookBtn = document.querySelector('#addBookBtn');
 const modal = document.querySelector('.modal'); 
+const close = document.querySelector('.close');
 
-
-
+// event listeners----------------------
 addBookBtn.addEventListener('click', function(){
     openAddBook();
 });
 
+close.addEventListener('click', function(){
+    modal.style.display = 'none';
+})
+
+// Logic -------------------------------
 let openAddBook = function () {
     console.log('button test');
     modal.style.display = 'block';
