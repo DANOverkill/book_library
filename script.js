@@ -20,7 +20,7 @@ formEvent.addEventListener('submit', function(event){
     const author = document.getElementById('author').value;
     const genre = document.getElementById('genre').value;
     const pages = document.getElementById('pages').value;
-    const read = document.getElementById('read').value;
+    const read = document.getElementById('read').checked;
     console.log(name);
     console.log(author);
     console.log(genre);
