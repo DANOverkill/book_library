@@ -1,9 +1,9 @@
-const buttonTest = document.querySelector('#test');
+const addBookBtn = document.querySelector('#addBookBtn');
 const modal = document.querySelector('.modal'); 
 
 
 
-buttonTest.addEventListener('click', function(){
+addBookBtn.addEventListener('click', function(){
     openAddBook();
 });
 
@@ -12,7 +12,7 @@ let openAddBook = function () {
     modal.style.display = 'block';
 }; 
 
-// end of test
+
 
 const myLibrary = [];
 
