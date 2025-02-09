@@ -48,9 +48,15 @@ function Book(name, genre, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.haveRead = function() {
-        console.log(`I have ${this.read} ${this.name}`);
+            if (this.read === true) {
+                return `I have read ${this.name}`;
+            } else {
+                return  `I have not read ${this.name}`
+            }
     };
 };
+
+
 
 function addBookToLibrary(name, genre, author, pages, read) {
     for (let book of myLibrary) {
