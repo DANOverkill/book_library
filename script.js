@@ -2,6 +2,7 @@
 const addBookBtn = document.querySelector('#addBookBtn');
 const modal = document.querySelector('.modal'); 
 const close = document.querySelector('.close');
+const formEvent = document.querySelector('#bookForm');
 
 // event listeners----------------------
 addBookBtn.addEventListener('click', function(){
@@ -10,11 +11,28 @@ addBookBtn.addEventListener('click', function(){
 
 close.addEventListener('click', function(){
     modal.style.display = 'none';
-})
+});
+
+formEvent.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const name = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const genre = document.getElementById('genre').value;
+    const pages = document.getElementById('pages').value;
+    const read = document.getElementById('read').value;
+    console.log(name);
+    console.log(author);
+    console.log(genre);
+    console.log(pages);
+    console.log(read);
+    modal.style.display = 'none';
+
+});
+
 
 // Logic -------------------------------
 let openAddBook = function () {
-    console.log('button test');
     modal.style.display = 'block';
 }; 
 
