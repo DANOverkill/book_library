@@ -26,6 +26,7 @@ formEvent.addEventListener('submit', function(event){
     console.log(genre);
     console.log(pages);
     console.log(read);
+    addBookToLibrary(name, genre, author, pages, read);
     modal.style.display = 'none';
 
 });
@@ -61,7 +62,7 @@ function Book(name, genre, author, pages, read) {
 function addBookToLibrary(name, genre, author, pages, read) {
     for (let book of myLibrary) {
         if (book.name.toLowerCase() === name.toLowerCase()) {
-            return "This book already exists in your library";
+           return alert ("This book already exists in your library");
         };
     }
     let newBook = new Book (name, genre, author, pages, read);
