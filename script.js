@@ -3,6 +3,7 @@ const addBookBtn = document.querySelector('#addBookBtn');
 const modal = document.querySelector('.modal'); 
 const close = document.querySelector('.close');
 const formEvent = document.querySelector('#bookForm');
+const libraryContainer = document.querySelector('#libraryDisplay');
 
 // event listeners----------------------
 addBookBtn.addEventListener('click', function(){
@@ -33,14 +34,11 @@ formEvent.addEventListener('submit', function(event){
 
 
 // Logic -------------------------------
+const myLibrary = [];
+
 let openAddBook = function () {
     modal.style.display = 'block';
 }; 
-
-
-
-const myLibrary = [];
-
 
 function Book(name, genre, author, pages, read) {
     this.name = name;
@@ -57,8 +55,6 @@ function Book(name, genre, author, pages, read) {
     };
 };
 
-
-
 function addBookToLibrary(name, genre, author, pages, read) {
     for (let book of myLibrary) {
         if (book.name.toLowerCase() === name.toLowerCase()) {
@@ -69,3 +65,9 @@ function addBookToLibrary(name, genre, author, pages, read) {
     myLibrary.push(newBook);
     return newBook;
     };
+
+let writeLibrary = function () {
+    myLibrary.forEach(element => {
+        
+    });
+};
