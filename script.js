@@ -3,7 +3,8 @@ const addBookBtn = document.querySelector('#addBookBtn');
 const modal = document.querySelector('.modal'); 
 const close = document.querySelector('.close');
 const formEvent = document.querySelector('#bookForm');
-const libraryContainer = document.querySelector('#libraryDisplay');
+const libraryContainer = document.querySelector('.libraryDisplay');
+const deleteBookBtn = document.querySelector('.delete-btn');
 
 // event listeners----------------------
 addBookBtn.addEventListener('click', function(){
@@ -63,11 +64,34 @@ function addBookToLibrary(name, genre, author, pages, read) {
     }
     let newBook = new Book (name, genre, author, pages, read);
     myLibrary.push(newBook);
-    return newBook;
+    writeLibrary();
     };
 
-let writeLibrary = function () {
-    myLibrary.forEach(element => {
-        
-    });
+
+
+    let writeLibrary = function () {
+    libraryContainer.innerHTML = ""; // Clear existing content
+    myLibrary.forEach(createBookCard);
 };
+
+let createBookCard = function() {
+    let bookCard = document.createElement('div');
+    bookCard.id = `bookCard-${Book.name}`
+    bookCard.className = 'bookCard'; 
+
+    bookCard.innerHTML = `
+    <h3>${Book.name}</h3>
+    <p>Author: ${Book.author}</p>
+    <p>Genre: ${Book.genre}</p>
+    <p>Pages: ${Book.pages}</p>
+    <p>Status: ${Book.read ? "Read" : "Unread"}</p>
+    <button class="delete-btn">Delete</button>
+    <button class="toggle-read-btn">Toggle Read</button>
+  `;
+
+  libraryContainer.appendChild(bookCard);
+};
+
+let deleteBook = function() {
+  
+}
