@@ -65,16 +65,16 @@ function addBookToLibrary(name, genre, author, pages, read) {
     let newBook = new Book (name, genre, author, pages, read);
     myLibrary.push(newBook);
     writeLibrary();
-    };
+};
 
 
 
-    let writeLibrary = function () {
+let writeLibrary = function () {
     libraryContainer.innerHTML = ""; // Clear existing content
     myLibrary.forEach(createBookCard);
 };
 
-let createBookCard = function() {
+let createBookCard = function(Book) {
     let bookCard = document.createElement('div');
     bookCard.id = `bookCard-${Book.name}`
     bookCard.className = 'bookCard'; 
