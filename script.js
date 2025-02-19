@@ -5,6 +5,8 @@ const close = document.querySelector('.close');
 const formEvent = document.querySelector('#bookForm');
 const libraryContainer = document.querySelector('.libraryDisplay');
 const deleteBookBtn = document.querySelector('.delete-btn');
+const formReset = document.getElementById('bookForm');
+
 
 // event listeners----------------------
 addBookBtn.addEventListener('click', function(){
@@ -23,14 +25,9 @@ formEvent.addEventListener('submit', function(event){
     const genre = document.getElementById('genre').value;
     const pages = document.getElementById('pages').value;
     const read = document.getElementById('read').checked;
-    console.log(name);
-    console.log(author);
-    console.log(genre);
-    console.log(pages);
-    console.log(read);
     addBookToLibrary(name, genre, author, pages, read);
     modal.style.display = 'none';
-
+    formReset.reset();
 });
 
 
