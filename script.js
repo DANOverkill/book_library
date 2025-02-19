@@ -90,5 +90,12 @@ let createBookCard = function(book) {
 };
 
 let deleteBook = function() {
-  
+
+}
+
+let checkForBooks = function () {
+    if (libraryContainer.innerHTML.trim().length === 0) {
+        console.log('no books')
+    }
+    console.log(libraryContainer.innerHTML);
 }
