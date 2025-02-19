@@ -74,17 +74,17 @@ let writeLibrary = function () {
     myLibrary.forEach(createBookCard);
 };
 
-let createBookCard = function(Book) {
+let createBookCard = function(book) {
     let bookCard = document.createElement('div');
-    bookCard.id = `bookCard-${Book.name}`
+    bookCard.id = `bookCard-${book.name}`
     bookCard.className = 'bookCard'; 
 
     bookCard.innerHTML = `
-    <h3>${Book.name}</h3>
-    <p>Author: ${Book.author}</p>
-    <p>Genre: ${Book.genre}</p>
-    <p>Pages: ${Book.pages}</p>
-    <p>Status: ${Book.read ? "Read" : "Unread"}</p>
+    <h3>${book.name}</h3>
+    <p>Author: ${book.author}</p>
+    <p>Genre: ${book.genre}</p>
+    <p>Pages: ${book.pages}</p>
+    <p>Status: ${book.read ? "Read" : "Unread"}</p>
     <button class="delete-btn">Delete</button>
     <button class="toggle-read-btn">Toggle Read</button>
   `;
