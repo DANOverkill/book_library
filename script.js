@@ -101,7 +101,8 @@ let deleteFromArray = function(event) {
 };
 
 
-
+// this checkForBooks function is being used only for troubleshooting and is not 
+// part of the functioning logic of the page 
 let checkForBooks = function () {
     if (libraryContainer.innerHTML.trim().length === 0) {
         console.log('no books')
@@ -109,6 +110,7 @@ let checkForBooks = function () {
     console.log(libraryContainer.innerHTML);
 }
 
-// test book 
+// test books that are just for use during development so 
+// I don't need to constantly create books 
 addBookToLibrary ('Silmarillion', 'fantasy', 'JRR Tolkien', '1586', true);
 addBookToLibrary ('the hobbit', 'fantasy', 'JRR Tolkien', '1586', true);
