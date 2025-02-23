@@ -30,6 +30,10 @@ formEvent.addEventListener('submit', function(event){
     formReset.reset();
 });
 
+libraryContainer.addEventListener('click', function(event){
+    deleteFromArray(event);
+});
+
 
 // Logic -------------------------------
 const myLibrary = [];
@@ -73,11 +77,11 @@ let writeLibrary = function () {
 
 let createBookCard = function(book) {
     let bookCard = document.createElement('div');
-    bookCard.id = `bookCard-${book.name}`
+    bookCard.id = `${book.name}`
     bookCard.className = 'bookCard'; 
 
     bookCard.innerHTML = `
-    <h3>${book.name}</h3>
+    <h3 class="bookName">${book.name}</h3>
     <p>Author: ${book.author}</p>
     <p>Genre: ${book.genre}</p>
     <p>Pages: ${book.pages}</p>
@@ -89,9 +93,14 @@ let createBookCard = function(book) {
   libraryContainer.appendChild(bookCard);
 };
 
-let deleteBook = function() {
+let deleteFromArray = function(event) {
+    let bookCard = event.target.closest('.bookCard');
+    let bookIndex = myLibrary.findIndex((book) => book.name === bookCard.id);
+    myLibrary.splice(bookIndex, 1);
+    bookCard.remove();
+};
 
-}
+
 
 let checkForBooks = function () {
     if (libraryContainer.innerHTML.trim().length === 0) {
@@ -99,3 +108,7 @@ let checkForBooks = function () {
     }
     console.log(libraryContainer.innerHTML);
 }
+
+// test book 
+addBookToLibrary ('Silmarillion', 'fantasy', 'JRR Tolkien', '1586', true);
+addBookToLibrary ('the hobbit', 'fantasy', 'JRR Tolkien', '1586', true);
