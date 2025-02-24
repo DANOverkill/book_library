@@ -4,8 +4,8 @@ const modal = document.querySelector('.modal');
 const close = document.querySelector('.close');
 const formEvent = document.querySelector('#bookForm');
 const libraryContainer = document.querySelector('.libraryDisplay');
-const deleteBookBtn = document.querySelector('.delete-btn');
 const formReset = document.getElementById('bookForm');
+
 
 
 // event listeners----------------------
@@ -32,12 +32,16 @@ formEvent.addEventListener('submit', function(event){
 
 libraryContainer.addEventListener('click', function(event){
     let readStatusDisplay = event.target.closest('.toggle-read-btn');
-    let bookCard = event.target.closest('.bookCard');
+    let bookCard = event.target.closest('.delete-btn');
+
+
     if (event.target == readStatusDisplay) {
         readingStatus(event);
         return;
+    }else if (event.target == bookCard) {
+        deleteFromArray(event);
     }
-    deleteFromArray(event);
+
 });
 
 
@@ -109,8 +113,8 @@ let deleteFromArray = function(event) {
 };
 
 let readingStatus = function (event) {
-    console.log(event);
     let readStatusDisplay = event.target.closest('.toggle-read-btn');
+    console.log(event);
     console.log(readStatusDisplay.className);
 }
 
