@@ -31,6 +31,12 @@ formEvent.addEventListener('submit', function(event){
 });
 
 libraryContainer.addEventListener('click', function(event){
+    let readStatusDisplay = event.target.closest('.toggle-read-btn');
+    let bookCard = event.target.closest('.bookCard');
+    if (event.target == readStatusDisplay) {
+        readingStatus(event);
+        return;
+    }
     deleteFromArray(event);
 });
 
@@ -94,11 +100,19 @@ let createBookCard = function(book) {
 };
 
 let deleteFromArray = function(event) {
+    console.log(event);
     let bookCard = event.target.closest('.bookCard');
     let bookIndex = myLibrary.findIndex((book) => book.name === bookCard.id);
     myLibrary.splice(bookIndex, 1);
     bookCard.remove();
+    console.log("iv'e been used");
 };
+
+let readingStatus = function (event) {
+    console.log(event);
+    let readStatusDisplay = event.target.closest('.toggle-read-btn');
+    console.log(readStatusDisplay.className);
+}
 
 
 // this checkForBooks function is being used only for troubleshooting and is not 
