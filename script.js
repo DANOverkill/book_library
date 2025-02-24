@@ -104,18 +104,18 @@ let createBookCard = function(book) {
 };
 
 let deleteFromArray = function(event) {
-    console.log(event);
     let bookCard = event.target.closest('.bookCard');
     let bookIndex = myLibrary.findIndex((book) => book.name === bookCard.id);
     myLibrary.splice(bookIndex, 1);
     bookCard.remove();
-    console.log("iv'e been used");
 };
 
 let readingStatus = function (event) {
     let readStatusDisplay = event.target.closest('.toggle-read-btn');
-    console.log(event);
-    console.log(readStatusDisplay.className);
+    let bookCard = event.target.closest('.bookCard');
+    let bookIndex = myLibrary.findIndex((book) => book.name === bookCard.id);
+    myLibrary[bookIndex].read = !myLibrary[bookIndex].read;
+    writeLibrary();
 }
 
 
