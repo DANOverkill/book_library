@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0e6f6; /* Soft lavender background for a retro vibe */
     color: #333;
     margin: 0;
     padding: 20px;
@@ -10,13 +10,13 @@ body {
 
 h1 {
     text-align: center;
-    color: #444;
+    color: #5A77DB; /* Soft blue for headings */
     margin-bottom: 20px;
 }
 
 /* Button Styles */
 button {
-    background-color: #4CAF50;
+    background-color: #5A77DB; /* Soft blue for buttons */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -27,7 +27,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #4A67CB; /* Slightly darker blue on hover */
 }
 
 #addBookBtn {
@@ -49,6 +49,10 @@ button:hover {
 }
 
 .modal form {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    margin-left: -150px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -73,15 +77,15 @@ button:hover {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0px;
+    right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #aaa;
+    color: #FF5DB6; /* Vibrant pink for the close button */
 }
 
 .close:hover {
-    color: #777;
+    color: #E54DA6; /* Slightly darker pink on hover */
 }
 
 /* Library Display Styles */
@@ -108,7 +112,7 @@ button:hover {
 
 .bookCard h3 {
     margin-top: 0;
-    color: #333;
+    color: #5A77DB; /* Soft blue for book titles */
     font-size: 20px;
 }
 
@@ -127,19 +131,19 @@ button:hover {
 }
 
 .delete-btn {
-    background-color: #ff4d4d;
+    background-color: #FF5DB6; /* Vibrant pink for delete button */
     color: white;
 }
 
 .delete-btn:hover {
-    background-color: #cc0000;
+    background-color: #E54DA6; /* Slightly darker pink on hover */
 }
 
 .toggle-read-btn {
-    background-color: #4CAF50;
+    background-color: #5A77DB; /* Soft blue for toggle read button */
     color: white;
 }
 
 .toggle-read-btn:hover {
-    background-color: #45a049;
+    background-color: #4A67CB; /* Slightly darker blue on hover */
 }
