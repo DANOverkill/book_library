@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0e6f6; /* Soft lavender background for a retro vibe */
+    background-color: #f0e6f6; 
     color: #333;
     margin: 0;
     padding: 20px;
@@ -10,13 +10,13 @@ body {
 
 h1 {
     text-align: center;
-    color: #5A77DB; /* Soft blue for headings */
+    color: #5A77DB; 
     margin-bottom: 20px;
 }
 
 /* Button Styles */
 button {
-    background-color: #5A77DB; /* Soft blue for buttons */
+    background-color: #5A77DB; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -27,7 +27,7 @@ button {
 }
 
 button:hover {
-    background-color: #4A67CB; /* Slightly darker blue on hover */
+    background-color: #4A67CB; 
 }
 
 #addBookBtn {
@@ -81,11 +81,11 @@ button:hover {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #FF5DB6; /* Vibrant pink for the close button */
+    color: #FF5DB6; 
 }
 
 .close:hover {
-    color: #E54DA6; /* Slightly darker pink on hover */
+    color: #E54DA6; 
 }
 
 /* Library Display Styles */
@@ -112,7 +112,7 @@ button:hover {
 
 .bookCard h3 {
     margin-top: 0;
-    color: #5A77DB; /* Soft blue for book titles */
+    color: #5A77DB; 
     font-size: 20px;
 }
 
@@ -131,19 +131,19 @@ button:hover {
 }
 
 .delete-btn {
-    background-color: #FF5DB6; /* Vibrant pink for delete button */
+    background-color: #FF5DB6; 
     color: white;
 }
 
 .delete-btn:hover {
-    background-color: #E54DA6; /* Slightly darker pink on hover */
+    background-color: #E54DA6; 
 }
 
 .toggle-read-btn {
-    background-color: #5A77DB; /* Soft blue for toggle read button */
+    background-color: #5A77DB; 
     color: white;
 }
 
 .toggle-read-btn:hover {
-    background-color: #4A67CB; /* Slightly darker blue on hover */
+    background-color: #4A67CB; 
 }
