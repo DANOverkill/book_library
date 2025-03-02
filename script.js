@@ -130,5 +130,5 @@ let checkForBooks = function () {
 
 // test books that are just for use during development so 
 // I don't need to constantly create books 
-addBookToLibrary ('Silmarillion', 'fantasy', 'JRR Tolkien', '1586', true);
-addBookToLibrary ('the hobbit', 'fantasy', 'JRR Tolkien', '1586', true);
+addBookToLibrary ('The Silmarillion', 'Fantasy', 'JRR Tolkien', '384', true);
+addBookToLibrary ('The Lord of the Rings', 'fantasy', 'JRR Tolkien', '1216', true);
