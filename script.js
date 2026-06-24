@@ -52,22 +52,6 @@ let openAddBook = function () {
     modal.style.display = 'block';
 }; 
 
-// We need to change this constructor into a Class
-// function Book(name, genre, author, pages, read) {
-//     this.name = name;
-//     this.genre = genre;
-//     this.author = author;
-//     this.pages = pages;
-//     this.read = read;
-//     this.haveRead = function() {
-//             if (this.read === true) {
-//                 return `I have read ${this.name}`;
-//             } else {
-//                 return  `I have not read ${this.name}`
-//             }
-//     };
-// };
-
 class Book {
     constructor (name, genre, author, pages, read) {
         this.name = name;

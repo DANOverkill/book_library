@@ -77,15 +77,18 @@ button:hover {
 
 .close {
     position: absolute;
-    top: 0px;
+    top: -3px;
     right: 10px;
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
     color: #FF5DB6; 
+    transition: color 0.2s ease;
+    z-index: 10;
 }
 
 .close:hover {
-    color: #E54DA6; 
+    color: #b6337f; 
 }
 
 /* Library Display Styles */
