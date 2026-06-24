@@ -74,22 +74,17 @@ class Book {
         this.genre = genre;
         this.author = author;
         this.pages = pages;
+        this.read = read;
     }
-    
-}
-function Book(name, genre, author, pages, read) {
-    this.name = name;
-    this.genre = genre;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.haveRead = function() {
-            if (this.read === true) {
-                return `I have read ${this.name}`;
-            } else {
-                return  `I have not read ${this.name}`
-            }
+
+    haveRead() {
+        if (this.read === true) {
+            return `I have read ${this.name}`;
+        } else {
+            return  `I have not read ${this.name}`
+        }
     };
+
 };
 
 function addBookToLibrary(name, genre, author, pages, read) {
